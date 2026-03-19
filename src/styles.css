@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+  /* === Organic Tech Palette === */
+  --color-moss: #2E4036;
+  --color-moss-light: #3D5548;
+  --color-clay: #CC5833;
+  --color-clay-light: #E07050;
+  --color-cream: #F2F0E9;
+  --color-cream-dark: #E8E5DB;
+  --color-charcoal: #1A1A1A;
+  --color-charcoal-light: #2A2A2A;
+
+  /* === Typography === */
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", ui-serif, Georgia, serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  /* === Spacing & Sizing === */
+  --radius-pill: 3rem;
+  --radius-card: 1rem;
+  --radius-sm: 0.5rem;
+
+  /* === Easing === */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-in-out-quart: cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+/* === Base Styles === */
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-charcoal);
+  color: var(--color-cream);
+  overflow-x: hidden;
+}
+
+/* === Selection === */
+::selection {
+  background-color: var(--color-clay);
+  color: var(--color-cream);
+}
+
+/* === Noise Overlay (applied via SVG in index.html) === */
+.noise-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.04;
+}

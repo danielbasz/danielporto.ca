@@ -1,0 +1,26 @@
+<dp-hero />
+
+<!-- Future sections with @defer -->
+@defer (on viewport) {
+  <section id="work" class="min-h-screen flex items-center justify-center">
+    <p class="text-cream/30 font-mono text-sm">[ Work — Coming in Phase 2 ]</p>
+  </section>
+} @placeholder {
+  <div id="work" class="min-h-screen"></div>
+}
+
+@defer (on viewport) {
+  <section id="about" class="min-h-screen flex items-center justify-center">
+    <p class="text-cream/30 font-mono text-sm">[ About — Coming in Phase 3 ]</p>
+  </section>
+} @placeholder {
+  <div id="about" class="min-h-screen"></div>
+}
+
+@defer (on viewport) {
+  <section id="contact" class="min-h-screen flex items-center justify-center">
+    <p class="text-cream/30 font-mono text-sm">[ Contact — Coming in Phase 4 ]</p>
+  </section>
+} @placeholder {
+  <div id="contact" class="min-h-screen"></div>
+}
