@@ -1,0 +1,53 @@
+<div
+  class="card-wrapper bg-charcoal-light/80 rounded-[1.5rem] p-6 md:p-8 cursor-pointer select-none
+         border border-cream/[0.06] hover:-translate-y-1 transition-transform duration-300 ease-out"
+  (click)="shuffle()"
+>
+  <!-- Header -->
+  <div class="mb-6">
+    <p class="font-mono text-[0.65rem] tracking-[0.2em] uppercase text-clay mb-2">
+      01 — Developer
+    </p>
+    <h3 class="font-display text-xl md:text-2xl font-bold text-cream leading-tight">
+      Code Shuffler
+    </h3>
+    <p class="text-cream/40 text-sm mt-2 leading-relaxed">
+      Angular · Java · Python · SQL — from CRA production systems to broadcast automation.
+    </p>
+  </div>
+
+  <!-- Deck -->
+  <div class="relative h-56 md:h-64 mb-6">
+    @for (snippet of snippets; track snippet.language) {
+      <div
+        class="snippet-card absolute inset-0 rounded-lg bg-[#0D1117] overflow-hidden"
+        [style.border-left]="'3px solid ' + snippet.accent"
+      >
+        <!-- Language label bar -->
+        <div class="flex items-center justify-between px-4 py-2.5 border-b border-cream/[0.06]">
+          <span class="font-mono text-[0.65rem] font-medium" [style.color]="snippet.accent">
+            {{ snippet.label }}
+          </span>
+          <span class="font-mono text-[0.6rem] text-cream/25">
+            {{ snippet.language }}
+          </span>
+        </div>
+
+        <!-- Code block -->
+        <pre
+          class="px-4 py-3 font-mono text-[0.7rem] md:text-xs text-cream/60 leading-[1.7] whitespace-pre overflow-hidden"
+        ><code>{{ snippet.code }}</code></pre>
+      </div>
+    }
+  </div>
+
+  <!-- Footer -->
+  <div class="flex items-center justify-between">
+    <span class="font-mono text-[0.6rem] tracking-wider uppercase text-cream/20">
+      tap to shuffle
+    </span>
+    <span class="font-mono text-xs text-cream/30">
+      {{ activeIndex() + 1 }}<span class="text-cream/15">/{{ snippets.length }}</span>
+    </span>
+  </div>
+</div>
