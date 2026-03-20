@@ -17,6 +17,7 @@ interface CodeSnippet {
 
 @Component({
   selector: 'dp-developer-card',
+  host: { class: 'block' },
   templateUrl: './developer-card.component.html',
 })
 export class DeveloperCardComponent implements OnDestroy {

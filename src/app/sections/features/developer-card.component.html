@@ -1,23 +1,20 @@
 <div
-  class="card-wrapper bg-charcoal-light/80 rounded-[1.5rem] p-6 md:p-8 cursor-pointer select-none
+  class="card-wrapper h-full flex flex-col bg-charcoal-light/80 rounded-[1.5rem] p-6 md:p-8 cursor-pointer select-none
          border border-cream/[0.06] hover:-translate-y-1 transition-transform duration-300 ease-out"
   (click)="shuffle()"
 >
   <!-- Header -->
-  <div class="mb-6">
-    <p class="font-mono text-[0.65rem] tracking-[0.2em] uppercase text-clay mb-2">
+  <div class="mb-6 min-h-[5.5rem]">
+    <p class="font-mono text-xs tracking-[0.2em] uppercase text-clay font-semibold mb-2">
       01 — Developer
     </p>
-    <h3 class="font-display text-xl md:text-2xl font-bold text-cream leading-tight">
-      Code Shuffler
-    </h3>
     <p class="text-cream/40 text-sm mt-2 leading-relaxed">
-      Angular · Java · Python · SQL — from CRA production systems to broadcast automation.
+      Angular · Java · Python · SQL — from government production systems to broadcast automation.
     </p>
   </div>
 
   <!-- Deck -->
-  <div class="relative h-56 md:h-64 mb-6">
+  <div class="relative min-h-56 md:min-h-64 mb-6 flex-1">
     @for (snippet of snippets; track snippet.language) {
       <div
         class="snippet-card absolute inset-0 rounded-lg bg-[#0D1117] overflow-hidden"
