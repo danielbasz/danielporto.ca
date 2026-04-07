@@ -30,7 +30,7 @@ jobs:
         if: github.ref == 'refs/heads/main'
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist/danielporto.ca/browser
+          path: dist/portfolio/browser
 
   deploy:
     if: github.ref == 'refs/heads/main'
