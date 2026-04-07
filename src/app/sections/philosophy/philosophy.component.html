@@ -1,0 +1,24 @@
+<section id="philosophy" class="relative min-h-[250vh]">
+  <div class="sticky top-0 h-screen overflow-hidden flex items-center justify-center">
+    <!-- Background Image -->
+    <img
+      src="assets/images/philosophy-lake.webp"
+      alt=""
+      class="absolute inset-0 h-full w-full object-cover scale-110"
+      loading="lazy"
+    />
+    <!-- Dark overlay for readability -->
+    <div class="absolute inset-0 bg-charcoal/75"></div>
+
+    <!-- Manifesto Text -->
+    <div class="relative z-10 max-w-4xl px-8 md:px-16">
+      @for (line of lines; track $index) {
+        <p [class]="getLineClasses(line.style)">
+          @for (word of line.words; track $index) {
+            <span class="word inline-block mr-[0.3em]">{{ word }}</span>
+          }
+        </p>
+      }
+    </div>
+  </div>
+</section>

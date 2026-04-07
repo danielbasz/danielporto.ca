@@ -4,15 +4,6 @@
     ? 'bg-charcoal/80 backdrop-blur-xl shadow-lg shadow-black/20 border border-white/5'
     : 'bg-transparent'"
 >
-  <!-- Logo / Name -->
-  <a
-    href="#hero"
-    (click)="scrollTo('hero', $event)"
-    class="px-4 py-2 font-display font-semibold text-sm tracking-wide text-cream hover:text-clay transition-colors duration-300"
-  >
-    DP
-  </a>
-
   <!-- Nav Links -->
   <div class="hidden md:flex items-center gap-1">
     <a
@@ -26,23 +17,10 @@
       class="px-3 py-2 text-sm text-cream/60 hover:text-cream transition-colors duration-300"
     >Work</a>
     <a
-      href="#about"
-      (click)="scrollTo('about', $event)"
+      href="#philosophy"
+      (click)="scrollTo('philosophy', $event)"
       class="px-3 py-2 text-sm text-cream/60 hover:text-cream transition-colors duration-300"
     >About</a>
-    <a
-      href="#contact"
-      (click)="scrollTo('contact', $event)"
-      class="px-3 py-2 text-sm text-cream/60 hover:text-cream transition-colors duration-300"
-    >Contact</a>
-
-    <span class="w-px h-4 bg-cream/10 mx-1"></span>
-
-    <a
-      routerLink="/devlog"
-      routerLinkActive="text-clay!"
-      class="px-3 py-2 text-sm font-mono text-cream/60 hover:text-cream transition-colors duration-300"
-    >Devlog</a>
   </div>
 
   <!-- CTA Button -->

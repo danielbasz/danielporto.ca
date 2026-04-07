@@ -51,10 +51,10 @@ export class ContentCardComponent implements OnDestroy {
       source: 'Daily Bulletin · GloboTV',
     },
     {
-      format: 'Social',
+      format: 'Edit Suite',
       accent: '#3D5548',
-      text: 'Behind every frame is a story waiting to be told. New project dropping this Friday.',
-      source: 'Instagram · @andarilhofilmes',
+      text: 'Final cut locked. Color grade approved. Audio mix at -24 LUFS. Package cleared for broadcast.',
+      source: 'Post-Production · GloboTV',
     },
     {
       format: 'Production',
