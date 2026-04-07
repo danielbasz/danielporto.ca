@@ -35,7 +35,7 @@ export class PhilosophyComponent implements OnDestroy {
       style: 'body',
     },
     {
-      words: "The tools change. The curiosity doesn't.".split(' '),
+      words: "The tools change. The drive doesn't.".split(' '),
       style: 'accent',
     },
   ];
